@@ -1,0 +1,87 @@
+site_name: 4AD Rulebook
+site_url: https://stbow.github.io/4ad
+
+nav:
+  - Home: index.md
+  - Core Mechanics: mechanics.md
+  - Character Creation: characters.md
+  - Exploring the Dungeon: exploring.md
+  - Combat and Encounters: combat.md
+  - Endgame and Progression: endgame.md
+  - Reference Tables: tables.md
+  - Appendix: appendix.md
+
+theme:
+  name: material
+  palette: 
+    scheme: fad
+    # Palette toggle for automatic mode
+#    - media: "(prefers-color-scheme)"
+#      toggle:
+#        icon: material/brightness-auto
+#        name: Switch to light mode
+
+    # Palette toggle for light mode
+#    - media: "(prefers-color-scheme: light)"
+#      scheme: fad 
+#      toggle:
+#        icon: material/brightness-7
+#        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+#    - media: "(prefers-color-scheme: dark)"
+#      scheme: slate
+#      toggle:
+#        icon: material/brightness-4
+#        name: Switch to system preference
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  
+  features:
+    - content.footnote.tooltips
+    - content.tooltips
+#    - navigation.instant.preview
+    - navigation.footer
+    - navigation.top
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols:
+      trademark: true
+      copyright: true
+      registered: true
+      care_of: true
+      plusminus: true
+      arrows: true
+      notequal: true
+      fractions: true
+      ordinal_numbers: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - toc:
+    - toc_depth: 2
+
+extra_css:
+  - stylesheets/extra.css
