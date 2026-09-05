@@ -3,12 +3,169 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4AD Character Card - Skeleton</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css"> 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/602ebbc371.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./styles.css" />
-  <title>Document</title>
 </head>
 <body>
-  
+
+  <div class="container">
+
+    <article class="card" data-character-id="char1">
+
+      <!-- HEADER: identity -->
+      <div class="card-header dark-header">
+        <div class="row">
+          <div class="col">
+            <span class="char-name">Thorgrim</span>
+          </div>
+          <div class="col">
+            <span class="char-class">Dwarf</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-body">
+
+        <!-- CORE STATS -->
+        <section class="char-stats row g-2 mb-3 row-cols-3 row-cols-md-5 justify-content-center">
+          <div class="col" data-stat="level">
+            <div class="stat">
+              <span class="stat-label">Level</span>
+              <span class="stat-value">2</span>
+            </div>
+          </div>
+          <div class="col" data-stat="hp">
+            <div class="stat">
+              <span class="stat-label">HP</span>
+              <span class="stat-value">
+                <span class="hp-current">5</span> / <span class="hp-max">7</span>
+            </div>
+            </span>
+          </div>
+          <div class="col" data-stat="gold">
+            <div class="stat">
+              <span class="stat-label">Gold</span>
+              <span class="stat-value">83</span>
+            </div>
+          </div>
+          <div class="col" data-stat="attack">
+            <div class="stat">
+              <span class="stat-label">Attack</span>
+              <span class="stat-value">+2</span>
+            </div>
+          </div>
+          <div class="col" data-stat="defense">
+            <div class="stat">
+              <span class="stat-label">Defense</span>
+              <span class="stat-value">+1</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATUS FLAGS: lantern / bandaged / encumbered / alive-unconscious -->
+        <section class="char-flags row g-2 mb-3 row-cols-2 row-cols-md-4 justify-content-center">
+          <div class="col" data-flag="lantern">
+            <div class="flag">
+              <span class="flag-label">Lantern</span>
+              <span class="flag-state">no</span>
+            </div>
+          </div>
+          <div class="col" data-flag="bandaged">
+            <div class="flag">
+              <span class="flag-label">Bandaged</span>
+              <span class="flag-state">no</span>
+            </div>
+          </div>
+          <div class="col" data-flag="encumbered">
+            <div class="flag">
+              <span class="flag-label">Encumbered</span>
+              <span class="flag-state">no</span>
+            </div>
+            <!-- computed from inventory count vs carry limit, not user-set -->
+          </div>
+          <div class="col" data-flag="status">
+            <div class="flag">
+              <span class="flag-label">Status</span>
+              <span class="flag-state">alive</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- ITEMS AND SPELLS SECTION -->
+        <div class="row row-cols-1 row-cols-lg-2 gx-2">
+          <div class="col">
+            <!-- EQUIPPED: hand slots + armor -->
+            <section class="char-equipped">
+              <h2 class="section-heading">Equipped</h2>
+              <div class="row g-0 gap-2">
+                <div class="col slot" data-slot="leftHand">
+                  <span class="slot-label">Left Hand</span>
+                  <span class="slot-item">Hand Weapon (sl)</span>
+                </div>
+                <div class="col slot" data-slot="armor">
+                  <span class="slot-label">Armor</span>
+                  <span class="slot-item">Light Armor</span>
+                </div>
+                <div class="col slot" data-slot="rightHand">
+                  <span class="slot-label">Right Hand</span>
+                  <span class="slot-item">Shield</span>
+                </div>
+              </div>
+            </section>
+            <!-- INVENTORY: everything owned, equipped or not -->
+            <section class="char-inventory">
+              <h2 class="section-heading">Inventory</h2>
+              <ul class="inventory-list">
+                <li class="inventory-item">Rope</li>
+                <li class="inventory-item">Potion of Healing</li>
+                <li class="inventory-item">Bow</li>
+              </ul>
+            </section>
+          </div>
+          <div class="col">
+            <!-- SPELLS / SCROLLS / POWERS -->
+            <section class="char-spells">
+              <h2 class="section-heading">Spells / Scrolls / Powers</h2>
+              <ul class="spells-list">
+                <li class="spell-item">Placeholder spell</li>
+              </ul>
+            </section>
+            <!-- ABILITIES: class-specific -->
+            <section class="char-abilities">
+              <h2 class="section-heading">Abilities</h2>
+              <ul class="abilities-list">
+                <li class="ability-item">Placeholder ability</li>
+              </ul>
+            </section>
+          </div>
+        </div>
+
+        <!-- QUEST + CLUES -->
+        <section class="char-quest row g-2 mb-3 row-cols-1 row-cols-md-2">
+          <div class="col">
+            <div class="quest">
+              <span class="quest-label">Quest</span>
+              <span class="quest-value">Not on a quest</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="quest">
+              <span class="clues-label">Clues</span>
+              <span class="clues-value">0</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </article>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
-<script src="./globals.js"></script>
-<script src="./scripts.js"></script>
 </html>

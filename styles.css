@@ -1,0 +1,201 @@
+:root {
+  --paper: #f8f3e8;
+  --card: #FFFFFF;
+  --ink: #2d2b28;
+  --accent: #058ED9;
+  --accent-hover: #38a5e1;
+  --accent-active: #69bbe8;
+  --accent-text: #022e47;
+  --accent-text-subtle: #036296;
+  --accent-border: #047fc2;
+  --accent-border-subtle: #7dc4eb;
+  --accent-border-strong: #036296;
+  --accent-background-tinted: #eaf5fc;
+  --accent-surface-tinted: #d5ecf9;
+  --accent-surface-hover: #b9e0f4;
+  --accent-surface-active: #9ad1f0;
+  --accent-contrast: #000000;
+  --accent-contrast-subtle: #011622;
+  --primary: #483D3F;
+  --primary-hover: #5a5051;
+  --primary-active: #6c6365;
+  --primary-text: #312a2b;
+  --primary-text-subtle: #645b5d;
+  --primary-border: #7f7778;
+  --primary-border-subtle: #bfbbbb;
+  --primary-border-strong: #645b5d;
+  --primary-background-tinted: #f4f3f3;
+  --primary-surface-tinted: #e9e8e8;
+  --primary-surface-hover: #dbd9da;
+  --primary-surface-active: #ccc9ca;
+  --primary-contrast: #FFFFFF;
+  --primary-contrast-subtle: #dcdada;
+  --secondary: #5C946E;
+  --secondary-hover: #7aa788;
+  --secondary-active: #97bba2;
+  --secondary-text: #1d2f23;
+  --secondary-text-subtle: #3f664c;
+  --secondary-border: #528362;
+  --secondary-border-subtle: #a4c3ae;
+  --secondary-border-strong: #3f664c;
+  --secondary-background-tinted: #eff5f1;
+  --secondary-surface-tinted: #e1ebe4;
+  --secondary-surface-hover: #cdded3;
+  --secondary-surface-active: #b7d0bf;
+  --secondary-contrast: #000000;
+  --secondary-contrast-subtle: #0e1711;
+  --neutral: #F4EBD9;
+  --neutral-hover: #dcd4c4;
+  --neutral-active: #c6beb0;
+  --neutral-text: #2d2b28;
+  --neutral-text-subtle: #605d56;
+  --neutral-border: #7d786f;
+  --neutral-border-subtle: #c2bbad;
+  --neutral-border-strong: #605d56;
+  --neutral-background-tinted: #f8f3e8;
+  --neutral-surface-tinted: #f1e8d6;
+  --neutral-surface-hover: #e1d9c9;
+  --neutral-surface-active: #d1c9ba;
+  --neutral-contrast: #000000;
+  --neutral-contrast-subtle: #514e48;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.ibm-plex-sans-regular {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.ibm-plex-sans-italic {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.ibm-plex-sans-bold {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--neutral-background-tinted);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Uncial Antiqua", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--primary-text);
+}
+
+/* accent example
+card background color: accent-surface-tinted
+card border: accent-border-subtle
+card header text: accent-text
+card body text: accent-text-subtle
+card body borders (e.g. checkboxes): accent-border
+card body labels (e.g. checkboxes): neutral-text
+filled-in button background: accent, accent-hover, accent-active
+button text: accent-contrast
+transparent button background: transparent, accent-surface-hover, accent-surface-active
+button text: accent-text-subtle
+*/
+
+.dark-header {
+  background-color: var(--accent);
+  color: var(--accent-contrast-subtle);
+}
+
+.neutral-header {
+  background-color: var(--neutral-surface-hover);
+  color: var(--neutral-text);
+}
+
+.neutral-body {
+  background-color: var(--neutral-surface-tinted);
+}
+
+.stat {
+  background-color: var(--accent-surface-tinted);
+  border: 1px solid var(--accent-border-subtle);
+  border-radius: .375rem;
+  color: var(--accent-text);
+  padding: .5rem;
+}
+
+.stat .stat-value {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.flag {
+  background-color: var(--secondary-surface-tinted);
+  border: 1px solid var(--secondary-border-subtle);
+  border-radius: .375rem;
+  color: var(--secondary-text);
+  padding: .5rem;
+}
+
+.flag .flag-state {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.char-equipped, .char-inventory, .char-spells, .char-abilities {
+  background-color: var(--primary-surface-tinted);
+  border: 1px solid var(--primary-border-subtle);
+  border-radius: .375rem;
+  color: var(--primary-text);
+  margin-bottom: 1rem;
+  padding: .5rem;
+}
+
+.char-equipped .slot {
+  background-color: transparent;
+  border: 1px solid var(--primary-border);
+  border-radius: .375rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+  padding: .5rem;
+}
+
+.char-equipped .slot-item {
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.char-quest .quest {
+  background-color: var(--accent-surface-tinted);
+  border: 1px solid var(--accent-border-subtle);
+  border-radius: .375rem;
+  color: var(--accent-text);
+  padding: .5rem;
+}
+
+.char-quest .quest-value, .char-quest .clues-value {
+  font-family: "IBM Plex Mono", monospace;
+}

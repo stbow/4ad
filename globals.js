@@ -1,3 +1,6 @@
+var minionCounter = 0;
+var bossCounter = 0;
+
 var charA = {
   name: "",
   class: "",
