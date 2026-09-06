@@ -4,9 +4,14 @@ site_url: https://stbow.github.io/4ad
 nav:
   - Home: index.md
   - Core Mechanics: mechanics.md
+  - Gameplay Procedure: gameplay.md
   - Character Creation: characters.md
+  - Equipment: equipment.md
   - Exploring the Dungeon: exploring.md
+  - Searching: searching.md
   - Combat and Encounters: combat.md
+  - Monsters: monsters.md
+  - Special Events and Items: special.md
   - Endgame and Progression: endgame.md
   - Reference Tables: tables.md
   - Appendix: appendix.md
@@ -14,26 +19,29 @@ nav:
 theme:
   name: material
   palette: 
-    scheme: fad
     # Palette toggle for automatic mode
-#    - media: "(prefers-color-scheme)"
-#      toggle:
-#        icon: material/brightness-auto
-#        name: Switch to light mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
 
     # Palette toggle for light mode
-#    - media: "(prefers-color-scheme: light)"
-#      scheme: fad 
-#      toggle:
-#        icon: material/brightness-7
-#        name: Switch to dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: fad
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
     # Palette toggle for dark mode
-#    - media: "(prefers-color-scheme: dark)"
-#      scheme: slate
-#      toggle:
-#        icon: material/brightness-4
-#        name: Switch to system preference
+    - media: "(prefers-color-scheme: dark)"
+      scheme: fad-dark
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
   font:
     text: IBM Plex Sans
     code: IBM Plex Mono
@@ -81,7 +89,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - toc:
-    - toc_depth: 2
+      permalink: true
+      toc_depth: 2
 
 extra_css:
   - stylesheets/extra.css
